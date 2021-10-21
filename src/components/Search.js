@@ -1,5 +1,5 @@
 import { createRef } from "react";
-import { addAction, deleteAction } from "../actions";
+import { addAction } from "../actions";
 import Api from '../config/Api';
 import store from '../store'
 
@@ -14,15 +14,15 @@ const Search = () => {
     }
 
     return (  
-        <div className="row justify-content-center container_form">
-            <p>Haz la busqueda de tu usuario de <b>GitHub</b></p>
-            <input 
-                ref={inputRef}
-                type="text"
-                className="form-control w-75"
-                placeholder="Busca el usuario"
-                onKeyDown={keySend}
-            />
+        <div className="container_form">
+                <p>Haz la busqueda de tu usuario de <b>GitHub</b></p>
+                <input 
+                    ref={inputRef}
+                    type="text"
+                    className="form-control w-75"
+                    placeholder="Busca el usuario"
+                    onKeyDown={keySend}
+                />
         </div>
     );
 }

@@ -9,10 +9,12 @@ const Item = ({lista}) => {
     return (
         <ul>
             <li>
-                <button 
-                onClick={() => redireccionarDetalles(lista)}>
+                <span
+                    onClick={() => redireccionarDetalles(lista)}
+                >
+                    <img src={lista.avatar_url} alt={lista.login} className="imagen_perfil" />
                     {lista.login}
-                </button>
+                </span>
             </li>
         </ul>
     );

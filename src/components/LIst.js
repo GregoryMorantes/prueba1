@@ -3,10 +3,8 @@ import Item from "./Item";
 
 const List = (props) => {
 
-    console.log(props.lista.items);
-    
     return (  
-        <ul className="ml-5">
+        <ul className="mt-5">
             {props.lista.items !== undefined ? props.lista.items.map(lista => (
               <Item 
                   key={lista.id}
