@@ -1,5 +1,6 @@
 const initialState = {
-    listaUsuario: []
+    listaUsuario: [],
+    InfoUser: {}
 };
  
 export default initialState;

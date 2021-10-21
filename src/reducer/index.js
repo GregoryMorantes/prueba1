@@ -1,6 +1,7 @@
 import {
     AGREGAR_CONSULTA,
-    ELIMINAR_CONSULTA
+    ELIMINAR_CONSULTA,
+    INFO_USER
 } from '../types/';
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -15,6 +16,11 @@ export default function (state, action) {
             return {
                 ...state,
                 listaUsuario: action.payload,
+            };
+        case INFO_USER:
+            return {
+                ...state,
+                InfoUser: action.payload
             };
         default:
             return state;

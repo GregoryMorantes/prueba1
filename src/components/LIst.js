@@ -1,19 +1,18 @@
 import { connect } from "react-redux";
+import Item from "./Item";
 
 const List = (props) => {
 
     console.log(props.lista.items);
-
+    
     return (  
         <ul className="ml-5">
-            {props.lista.items !== undefined ? props.lista.items.map( function (lista) {
-                return (
-                    <li>
-                        <img src={lista.avatar_url} className="imagen_perfil" /> 
-                        <span className="ml-5">{lista.login}</span>
-                    </li>
-                )
-            }): <p>sin datos</p>}
+            {props.lista.items !== undefined ? props.lista.items.map(lista => (
+              <Item 
+                  key={lista.id}
+                  lista={lista}
+              />  
+            )): <p>sin datos</p>}
         </ul>
     );
 }
